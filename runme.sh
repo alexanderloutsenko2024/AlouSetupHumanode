@@ -31,7 +31,7 @@ json_next_key='"mnemonicInserted":true,'
 
 echo '# 2) bash is expected to change the directory to .humanode/workspaces/default folder'
 
-cd .humanode/workspaces/default
+cd $HOME/.humanode/workspaces/default
 
 
 
@@ -44,7 +44,7 @@ echo '# 3) bash is expected to insert mnemonic by executing the following comman
 echo '# 4) bash is expected to verify whether a kbai key is inserted and encoded with suri'
 
 echo "--== the kbai key just inserted looks like the following:"
-ls_output=$(ls .humanode/workspaces/default/substrate-data/chains/humanode_mainnet/keystore)
+ls_output=$(ls $HOME/.humanode/workspaces/default/substrate-data/chains/humanode_mainnet/keystore)
 printf %s "$ls_output"
 echo " " 
 
