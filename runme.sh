@@ -31,6 +31,7 @@ json_node_name='{"nodename":"'$nodename'",'
 json_next_key='"mnemonicInserted":true,'
 echo ' '
 echo "-= step #1 is DONE =-"
+echo ' '
 
 
 echo '# 2) bash is expected to change the directory to .humanode/workspaces/default folder'
@@ -38,6 +39,7 @@ echo '# 2) bash is expected to change the directory to .humanode/workspaces/defa
 cd $HOME/.humanode/workspaces/default
 echo ' '
 echo "-= step #2 is DONE =-"
+echo ' '
 
 
 echo '# 3) bash is expected to insert mnemonic by executing the following command'
@@ -45,6 +47,7 @@ echo '# 3) bash is expected to insert mnemonic by executing the following comman
 ./humanode-peer key insert  --key-type kbai --scheme sr25519 --suri "$mnemonic" --base-path substrate-data --chain chainspec.json
 echo ' '
 echo "-= step #3 is DONE =-"
+echo ' '
 
 
 
@@ -55,6 +58,7 @@ ls_output=$(ls $HOME/.humanode/workspaces/default/substrate-data/chains/humanode
 printf %s "$ls_output"
 echo ' ' 
 echo "-= step #4 is DONE =-"
+echo ' '
 
 
 
@@ -63,6 +67,7 @@ echo '# 5) bash is expected to delete existing workspace.json file'
 rm workspace.json
 echo ' '
 echo "-= step #5 is DONE =-"
+echo ' '
 
 
 
@@ -71,6 +76,7 @@ echo '# 6) bash is expected to create a new JSON file instead'
 echo ${json_node_name}${json_next_key}'"rpcUrlMode":{"type":"ngrok-auto-detect"},"isValidator":false,"tunnelType":"humanode","manualTunnelRuntime":false,"bioauthEnroll":false,"chainspecPath":"chainspec.json","executablePath":"humanode-peer","humanodeWebsocketTunnelClientPath":"humanode-websocket-tunnel","manifestUrl":"https://chainspec.mainnet.stages.humanode.io/latest/manifest.json","ngrokPath":"ngrok-wrapper","executableInfo":{"platform":"Linux","arch":"x86_64","displayName":"Humanode Mainnet"},"substrateAddress":""}' > workspace.json
 echo ' '
 echo "-= step #6 is DONE =-"
+echo ' '
 
 
 
