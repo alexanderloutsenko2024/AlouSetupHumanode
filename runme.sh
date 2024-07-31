@@ -10,6 +10,7 @@
 # - 4 - execute the bash file by use of the following command:
 ### ./runme.sh
 
+echo ' '
 echo "--== This script will insert your mnemonic and set your mnemonic insertion status to TRUE ==--" 
 echo ' '
 
@@ -50,7 +51,7 @@ echo '# 4) bash is expected to verify whether a kbai key is inserted and encoded
 echo "--== the kbai key just inserted looks like the following:"
 ls_output=$(ls $HOME/.humanode/workspaces/default/substrate-data/chains/humanode_mainnet/keystore)
 printf %s "$ls_output"
-echo " " 
+echo ' ' 
 
 
 
@@ -75,3 +76,4 @@ snap install jq
 cat workspace.json | jq
 echo ' '
 echo "-- == End of Script == --"
+echo ' '
