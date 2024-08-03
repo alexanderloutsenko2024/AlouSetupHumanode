@@ -42,7 +42,7 @@ echo "-= step #2 is DONE =-"
 echo ' '
 
 
-echo '# 3) bash is expected to insert mnemonic by executing the following command'
+echo '# 3) bash is expected to insert mnemonic by executing the "./humanode-peer key insert" command'
 
 ./humanode-peer key insert  --key-type kbai --scheme sr25519 --suri "$mnemonic" --base-path substrate-data --chain chainspec.json
 echo ' '
@@ -71,7 +71,7 @@ echo ' '
 
 
 
-echo '# 6) bash is expected to create a new JSON file instead'
+echo '# 6) bash is expected to create a new JSON file instead of just deleted workspace.json file'
 
 echo ${json_node_name}${json_next_key}'"rpcUrlMode":{"type":"ngrok-auto-detect"},"isValidator":false,"tunnelType":"humanode","manualTunnelRuntime":false,"bioauthEnroll":false,"chainspecPath":"chainspec.json","executablePath":"humanode-peer","humanodeWebsocketTunnelClientPath":"humanode-websocket-tunnel","manifestUrl":"https://chainspec.mainnet.stages.humanode.io/latest/manifest.json","ngrokPath":"ngrok-wrapper","executableInfo":{"platform":"Linux","arch":"x86_64","displayName":"Humanode Mainnet"},"substrateAddress":""}' > workspace.json
 echo ' '
